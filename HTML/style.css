@@ -26,3 +26,34 @@ ol {
   margin-left: 0;            /* kill the browser’s indent */
   padding-left: 0;           /* ditto */
 }
+
+.site-nav {
+  display: flex;            /* now a flex container */
+  justify-content: flex-start; 
+  gap: 1rem;
+}
+.site-nav a {               /* these are the flex items */
+  text-decoration: none;
+}
+.content {
+  display: flex;
+  flex-direction: row;      /* default, but explicit = clear */
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.sidebar {
+  /* 25 % of the leftover width */
+  flex: 1;             /*   grow   */
+  max-width: 450px;    /* cap width on big screens   */
+  background: #f7f7f7;
+  padding: 1rem;
+}
+
+.main-area {
+  /* 75 % of the leftover width */
+  flex: 3;             /* grow three times faster     */
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
